@@ -66,14 +66,38 @@ body {
   color: var(--yellow);
 }
 
-/* CONTAINER */
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: var(--purple);
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CONTENT */
 .container {
   max-width: 1000px;
   margin: 60px auto;
   padding: 0 20px;
 }
 
-/* TITLE */
 h2 {
   text-align: center;
   color: var(--red);
@@ -83,14 +107,14 @@ h2 {
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 /* CARD */
 .card {
   background: white;
-  padding: 30px;
+  padding: 25px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -112,6 +136,10 @@ h2 {
   border-radius: 5px;
 }
 
+.btn:hover {
+  background: var(--purple);
+}
+
 /* FOOTER */
 footer {
   background: var(--purple);
@@ -121,7 +149,7 @@ footer {
   margin-top: 60px;
 }
 
-/* MOBILE NAV */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .menu-toggle {
@@ -130,15 +158,18 @@ footer {
 
   .site-nav {
     position: fixed;
-    top: 0;
     right: -260px;
-    width: 260px;
+    top: 0;
     height: 100%;
+    width: 260px;
     flex-direction: column;
-    background: var(--purple);
     padding-top: 80px;
     transition: right 0.3s ease;
     z-index: 1000;
+  }
+
+  .site-nav.active {
+    right: 0;
   }
 
   .site-nav a {
@@ -146,8 +177,10 @@ footer {
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
-  .site-nav.active {
-    right: 0;
+  /* MOBILE DROPDOWN ALWAYS OPEN */
+  .dropdown-content {
+    display: block;
+    position: static;
   }
 }
 
@@ -166,14 +199,28 @@ footer {
 </header>
 
 <nav class="site-nav" id="mobileNav">
+
   <a href="index.html">Home</a>
   <a href="forward.html">Forward</a>
   <a href="preface.html">Preface</a>
-  <a href="stories.html">Stories</a>
+
+  <!-- DROPDOWN -->
+  <div class="dropdown">
+    <a href="stories.html">Stories ▾</a>
+    <div class="dropdown-content">
+      <a href="chapter1.html">Chapter One</a>
+      <a href="chapter2.html">Chapter Two</a>
+      <a href="chapter3.html">Chapter Three</a>
+      <a href="chapter4.html">Chapter Four</a>
+      <a href="chapter5.html">Chapter Five</a>
+    </div>
+  </div>
+
   <a href="store.html">Store</a>
   <a href="about.html">About</a>
   <a href="closing.html">Closing</a>
   <a href="prayer.html">Prayer</a>
+
 </nav>
 
 <div class="container">
