@@ -7,11 +7,20 @@
 <title>Store | Love That Covers</title>
 
 <style>
+
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
+  --yellow: #f4c542;
   --green: #6a994e;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* BODY */
@@ -19,28 +28,35 @@ body {
   font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
-  margin: 0;
 }
 
 /* HEADER */
-header {
+.site-header {
   background: var(--red);
   color: white;
-  text-align: center;
-  padding: 20px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* NAV */
-nav {
+/* MENU ICON */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAV DESKTOP */
+.site-nav {
   background: var(--purple);
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 15px;
-  flex-wrap: wrap;
 }
 
-nav a {
+.site-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -54,7 +70,7 @@ nav a {
   padding: 0 20px;
 }
 
-/* SIMPLE BOOK CARD */
+/* BOOK CARD */
 .book {
   background: white;
   padding: 40px;
@@ -90,7 +106,6 @@ nav a {
 
 .book-info h2 {
   color: var(--red);
-  font-size: 2rem;
   margin-bottom: 10px;
 }
 
@@ -106,12 +121,12 @@ nav a {
 /* BUTTON */
 .btn {
   display: inline-block;
-  margin-top: 10px;
   padding: 12px 25px;
   background: var(--green);
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 /* FOOTER */
@@ -122,25 +137,52 @@ footer {
   padding: 20px;
   margin-top: 60px;
 }
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    flex-direction: column;
+    background: var(--purple);
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .site-nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .site-nav.active {
+    right: 0;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Love That Covers</h1>
-</header>
-
-<header>
-  <h1>Love That Covers</h1>
-
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" onclick="toggleMenu()">
-    ☰
+<header class="site-header">
+  <div>
+    <h1>Love That Covers</h1>
+    <p>by Bradley Hobbs</p>
   </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
-<nav id="mobileNav">
+<nav class="site-nav" id="mobileNav">
   <a href="index.html">Home</a>
   <a href="forward.html">Forward</a>
   <a href="preface.html">Preface</a>
@@ -151,7 +193,7 @@ footer {
   <a href="prayer.html">Prayer</a>
 </nav>
 
-<!-- SIMPLE ANNOUNCEMENT -->
+<!-- SIMPLE STORE CARD -->
 <div class="container">
 
   <div class="book">
@@ -169,13 +211,13 @@ footer {
 
 </div>
 
-<!-- FEATURED BOOK SECTION -->
+<!-- FEATURED BOOK -->
 <section class="book-feature">
 
   <div class="book-container">
 
     <div class="book-image">
-      <img src="IMG_0896.png" alt="Love That Covers Book Cover">
+      <img src="cover.jpg" alt="Love That Covers Book Cover">
     </div>
 
     <div class="book-info">
@@ -184,8 +226,7 @@ footer {
 
       <p>
         Real stories of healing, restoration, and the power of love that covers. 
-        A journey through generations showing how compassion, mercy, and grace 
-        transform lives.
+        A journey through generations showing how compassion, mercy, and grace transform lives.
       </p>
 
       <a href="#" class="btn">Buy on Amazon (Coming Soon)</a>
@@ -198,10 +239,12 @@ footer {
 <footer>
   <p>© 2026 Bradley Hobbs</p>
 </footer>
+
 <script>
 function toggleMenu() {
   document.getElementById("mobileNav").classList.toggle("active");
 }
 </script>
+
 </body>
 </html>
