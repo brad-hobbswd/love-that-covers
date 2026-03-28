@@ -5,17 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Chapter Four | Love That Covers</title>
-<meta name="description" content="Chapter Four: Passing the Flame">
 
 <style>
 
-/* COLOR PALETTE */
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
   --yellow: #f4c542;
-  --blue: #4a90a4;
   --green: #6a994e;
 }
 
@@ -28,42 +25,64 @@
 
 /* BODY */
 body {
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
   line-height: 1.9;
 }
 
 /* HEADER */
-header {
+.site-header {
   background: var(--red);
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
-header h1 {
-  font-size: 2.2rem;
+/* MENU */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
 }
 
 /* NAV */
-nav {
+.site-nav {
   background: var(--purple);
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 15px;
-  flex-wrap: wrap;
 }
 
-nav a {
+.site-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: var(--yellow);
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: var(--purple);
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* CONTENT */
@@ -75,7 +94,6 @@ nav a:hover {
 
 .chapter-title {
   text-align: center;
-  margin-bottom: 10px;
   color: var(--red);
   font-size: 2rem;
 }
@@ -86,9 +104,27 @@ nav a:hover {
   letter-spacing: 2px;
 }
 
-.container p {
+p {
   margin-bottom: 20px;
-  font-size: 1.05rem;
+}
+
+/* CHAPTER NAV */
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.nav-btn:hover {
+  background: var(--purple);
 }
 
 /* FOOTER */
@@ -100,30 +136,70 @@ footer {
   margin-top: 60px;
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    right: -260px;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: 0.3s;
+  }
+
+  .site-nav.active {
+    right: 0;
+  }
+
+  .dropdown-content {
+    display: block;
+    position: static;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Love That Covers</h1>
-  <p>by Bradley Hobbs</p>
-
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" onclick="toggleMenu()">
-    ☰
+<header class="site-header">
+  <div>
+    <h1>Love That Covers</h1>
+    <p>by Bradley Hobbs</p>
   </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
-<nav id="mobileNav">
+<nav class="site-nav" id="mobileNav">
+
   <a href="index.html">Home</a>
   <a href="forward.html">Forward</a>
   <a href="preface.html">Preface</a>
-  <a href="stories.html">Stories</a>
+
+  <div class="dropdown">
+    <a href="stories.html">Stories ▾</a>
+    <div class="dropdown-content">
+      <a href="chapter1.html">Chapter One</a>
+      <a href="chapter2.html">Chapter Two</a>
+      <a href="chapter3.html">Chapter Three</a>
+      <a href="chapter4.html">Chapter Four</a>
+      <a href="chapter5.html">Chapter Five</a>
+    </div>
+  </div>
+
   <a href="store.html">Store</a>
   <a href="about.html">About</a>
   <a href="closing.html">Closing</a>
   <a href="prayer.html">Prayer</a>
+
 </nav>
 
 <div class="container">
@@ -144,14 +220,26 @@ footer {
   </p>
 
   <p>
-    Daniel smiled, remembering the warmth he had felt as a boy. Love had traveled through generations; through fabric, prayers, and people willing to care. He realized that love never stopped moving. It reached a time and distance to meet those in need of hope and healing.
+    Daniel smiled, remembering the warmth he had felt as a boy. Love had traveled through generations; through fabric, prayers, and people willing to care. He realized that love never stopped moving. It reached across time and distance to meet those in need of hope and healing.
   </p>
+
+  <!-- NAVIGATION -->
+  <div class="chapter-nav">
+    <a href="chapter3.html" class="nav-btn">← Previous Chapter</a>
+    <a href="chapter5.html" class="nav-btn">Next Chapter →</a>
+  </div>
 
 </div>
 
 <footer>
   <p>© 2026 Bradley Hobbs</p>
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileNav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
