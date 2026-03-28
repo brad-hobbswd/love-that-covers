@@ -5,50 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Stories | Love That Covers</title>
-<meta name="description" content="Explore the full journey of Love That Covers">
 
 <style>
 
-/* COLOR PALETTE */
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
   --yellow: #f4c542;
-  --blue: #4a90a4;
   --green: #6a994e;
 }
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
 body {
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
+  margin: 0;
 }
 
-/* HEADER */
 header {
   background: var(--red);
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
-/* NAV */
 nav {
   background: var(--purple);
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 15px;
-  flex-wrap: wrap;
 }
 
 nav a {
@@ -57,80 +44,45 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  color: var(--yellow);
-}
-
-/* CONTAINER */
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 60px auto;
   padding: 0 20px;
 }
 
-/* TITLE */
-.page-title {
+h2 {
   text-align: center;
-  margin-bottom: 50px;
   color: var(--red);
-  font-size: 2.3rem;
+  margin-bottom: 40px;
 }
 
-/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
 
-/* CARD */
 .card {
   background: white;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
 }
 
 .card h3 {
   color: var(--red);
-  margin-bottom: 10px;
 }
 
-.card p {
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-}
-
-/* BUTTON */
 .btn {
   display: inline-block;
+  margin-top: 15px;
   padding: 10px 20px;
   background: var(--green);
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
 }
 
-.btn:hover {
-  background: var(--purple);
-}
-
-/* SECTION LABEL */
-.section-label {
-  margin: 60px 0 20px;
-  font-size: 1.5rem;
-  color: var(--purple);
-  text-align: center;
-}
-
-/* FOOTER */
 footer {
   background: var(--purple);
   color: white;
@@ -151,15 +103,13 @@ footer {
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
+  <a href="closing.html">Closing</a>
   <a href="prayer.html">Prayer</a>
 </nav>
 
 <div class="container">
 
-  <h2 class="page-title">The Stories</h2>
-
-  <!-- CHAPTERS -->
-  <div class="section-label">Chapters</div>
+  <h2>The Stories</h2>
 
   <div class="grid">
 
@@ -191,38 +141,6 @@ footer {
       <h3>Chapter Five</h3>
       <p>The Legacy of Love</p>
       <a href="chapter5.html" class="btn">Read</a>
-    </div>
-
-  </div>
-
-  <!-- REFLECTION -->
-  <div class="section-label">Reflection</div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Closing Thoughts</h3>
-      <p>A reflection on love, healing, and legacy</p>
-      <a href="closing.html" class="btn">Read</a>
-    </div>
-
-    <div class="card">
-      <h3>Prayer of Commitment</h3>
-      <p>A prayer to walk in love and restoration</p>
-      <a href="prayer.html" class="btn">Read</a>
-    </div>
-
-  </div>
-
-  <!-- AUTHOR -->
-  <div class="section-label">About</div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>About the Author</h3>
-      <p>Meet Bradley Hobbs and the heart behind the stories</p>
-      <a href="about.html" class="btn">Read</a>
     </div>
 
   </div>
