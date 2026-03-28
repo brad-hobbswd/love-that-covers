@@ -1,2 +1,2 @@
 # love-that-covers
-Love That Covers Book
+Love That Covers Books
