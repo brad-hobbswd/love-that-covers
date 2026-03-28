@@ -9,22 +9,88 @@
 
 <style>
 
+/* COLOR PALETTE */
+:root {
+  --cream: #f6e7c1;
+  --red: #e63946;
+  --purple: #5a3e6b;
+  --yellow: #f4c542;
+  --blue: #4a90a4;
+  --green: #6a994e;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Georgia, serif;
+  background: var(--cream);
+  color: var(--purple);
+  line-height: 1.8;
+}
+
+/* HEADER */
+header {
+  background: var(--red);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 0.9rem;
+}
+
+/* MENU ICON */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAV DESKTOP */
+nav {
+  background: var(--purple);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--yellow);
+}
+
 /* HERO BANNER */
 .hero-banner {
   width: 100%;
   background: var(--cream);
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 40px 20px;
 }
 
 .hero-banner img {
   width: 100%;
   max-width: 900px;
-  height: auto;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* QUICK LINKS */
@@ -47,134 +113,16 @@
   text-decoration: none;
   color: var(--purple);
   box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s;
 }
 
 .mini-card h4 {
   color: var(--red);
   margin-bottom: 8px;
-  font-size: 1.1rem;
-}
-
-.mini-card p {
-  font-size: 0.9rem;
 }
 
 .mini-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
-
-/* COLOR PALETTE */
-:root {
-  --cream: #f6e7c1;
-  --red: #e63946;
-  --purple: #5a3e6b;
-  --yellow: #f4c542;
-  --blue: #4a90a4;
-  --green: #6a994e;
-}
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
-body {
-  font-family: 'Georgia', serif;
-  background: var(--cream);
-  color: var(--purple);
-  line-height: 1.8;
-}
-
-/* HEADER */
-header {
-  background: var(--red);
-  color: white;
-  padding: 20px 40px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-}
-
-/* NAV */
-nav {
-  background: var(--purple);
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--yellow);
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, var(--yellow), var(--blue));
-  color: white;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-/* SECTION */
-.section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* CONTENT CARDS */
-.card {
-  background: white;
-  padding: 50px;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  margin-bottom: 40px;
-}
-
-.card h3 {
-  color: var(--red);
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.card p {
-  margin-bottom: 20px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: var(--green);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: var(--purple);
 }
 
 /* FOOTER */
@@ -186,19 +134,48 @@ footer {
   margin-top: 40px;
 }
 
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    flex-direction: column;
+    background: var(--purple);
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  nav.active {
+    right: 0;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Love That Covers</h1>
-  <p>by Bradley Hobbs</p>
-
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" onclick="toggleMenu()">
-    ☰
+  <div>
+    <h1>Love That Covers</h1>
+    <p>by Bradley Hobbs</p>
   </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
 <nav id="mobileNav">
@@ -213,12 +190,10 @@ footer {
 </nav>
 
 <section class="hero-banner">
-  <img src="B301321B-BF15-4B34-BEE3-1EFD43D70DFA.png" alt="Love That Covers - Real Stories and Healing">
+  <img src="B301321B-BF15-4B34-BEE3-1EFD43D70DFA.png" alt="Love That Covers Banner">
 </section>
 
-
-  <section class="quick-links">
-
+<section class="quick-links">
   <div class="card-grid">
 
     <a href="forward.html" class="mini-card">
@@ -234,6 +209,11 @@ footer {
     <a href="stories.html" class="mini-card">
       <h4>The Stories</h4>
       <p>Follow the journey through five chapters</p>
+    </a>
+
+    <a href="store.html" class="mini-card">
+      <h4>Store</h4>
+      <p>Get your copy of Love That Covers</p>
     </a>
 
     <a href="closing.html" class="mini-card">
@@ -252,17 +232,17 @@ footer {
     </a>
 
   </div>
-
-
 </section>
 
 <footer>
   <p>© 2026 Bradley Hobbs | Love That Covers</p>
 </footer>
+
 <script>
 function toggleMenu() {
   document.getElementById("mobileNav").classList.toggle("active");
 }
 </script>
+
 </body>
 </html>
