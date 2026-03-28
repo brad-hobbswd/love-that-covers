@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stories | Love That Covers</title>
+<title>Store | Love That Covers</title>
 
 <style>
 
@@ -12,16 +12,18 @@
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
-  --yellow: #f4c542;
   --green: #6a994e;
+  --yellow: #f4c542;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: Georgia, serif;
   background: var(--cream);
@@ -35,6 +37,7 @@ body {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* MENU */
@@ -59,62 +62,112 @@ body {
   font-weight: bold;
 }
 
-/* DROPDOWN */
-.dropdown {
-  position: relative;
+.site-nav a:hover {
+  color: var(--yellow);
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: var(--purple);
-  top: 100%;
-  left: 0;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* CONTENT */
-.container {
+/* BOOK SECTION */
+.book-container {
   max-width: 1000px;
   margin: 60px auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
   padding: 0 20px;
 }
 
-h2 {
-  text-align: center;
+.book-image img {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h2 {
   color: var(--red);
-  margin-bottom: 40px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+.book-info p {
+  margin-bottom: 15px;
 }
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: center;
+.tagline {
+  font-style: italic;
+  margin-bottom: 15px;
 }
 
+/* BUTTON */
 .btn {
-  margin-top: 15px;
   display: inline-block;
-  padding: 10px 20px;
+  margin-top: 15px;
+  padding: 12px 25px;
   background: var(--green);
   color: white;
   text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: var(--purple);
+}
+
+/* FEATURES */
+.features {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.features h3 {
+  color: var(--red);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.features ul {
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+/* FOOTER */
+footer {
+  background: var(--purple);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
 }
 
 /* MOBILE */
@@ -132,25 +185,26 @@ h2 {
     width: 260px;
     flex-direction: column;
     padding-top: 80px;
-    transition: 0.3s;
+    transition: right 0.3s ease;
   }
 
   .site-nav.active {
     right: 0;
   }
 
-  .dropdown-content {
-    display: block;
-    position: static;
+  .site-nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
   }
-}
 
-footer {
-  background: var(--purple);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
+  .book-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-image img {
+    width: 200px;
+  }
 }
 
 </style>
@@ -163,6 +217,7 @@ footer {
     <h1>Love That Covers</h1>
     <p>by Bradley Hobbs</p>
   </div>
+
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
@@ -171,18 +226,7 @@ footer {
   <a href="index.html">Home</a>
   <a href="forward.html">Forward</a>
   <a href="preface.html">Preface</a>
-
-  <div class="dropdown">
-    <a href="stories.html">Stories ▾</a>
-    <div class="dropdown-content">
-      <a href="chapter1.html">Chapter One</a>
-      <a href="chapter2.html">Chapter Two</a>
-      <a href="chapter3.html">Chapter Three</a>
-      <a href="chapter4.html">Chapter Four</a>
-      <a href="chapter5.html">Chapter Five</a>
-    </div>
-  </div>
-
+  <a href="stories.html">Stories</a>
   <a href="store.html">Store</a>
   <a href="about.html">About</a>
   <a href="closing.html">Closing</a>
@@ -190,26 +234,50 @@ footer {
 
 </nav>
 
-<div class="container">
+<!-- BOOK -->
+<div class="book-container">
 
-  <h2>The Stories</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Chapter One</h3>
-      <p>The Quilt</p>
-      <a href="chapter1.html" class="btn">Read</a>
-    </div>
-
-    <div class="card">
-      <h3>Chapter Two</h3>
-      <p>The Gift of Healing</p>
-      <a href="chapter2.html" class="btn">Read</a>
-    </div>
-
+  <div class="book-image">
+    <img src="cover.jpg" alt="Love That Covers Book Cover">
   </div>
 
+  <div class="book-info">
+    <h2>Love That Covers</h2>
+    <p><strong>by Bradley Hobbs</strong></p>
+
+    <p class="tagline">
+      A story that carries love across generations.
+    </p>
+
+    <p>
+      Real stories of healing, restoration, and the power of love that covers. 
+      This journey reveals how mercy, compassion, and grace transform lives 
+      across time.
+    </p>
+
+    <p><strong>Coming Soon on Amazon</strong></p>
+
+    <a href="#" class="btn">Buy on Amazon</a>
+  </div>
+
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+  <h3>What You’ll Experience</h3>
+  <ul>
+    <li>Stories rooted in healing and restoration</li>
+    <li>Generational impact of love and mercy</li>
+    <li>Faith-centered transformation</li>
+    <li>Encouragement for personal growth</li>
+  </ul>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial">
+  <p>
+    “A powerful reminder that love reaches farther than we ever imagine.”
+  </p>
 </div>
 
 <footer>
