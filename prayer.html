@@ -5,17 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Prayer of Commitment | Love That Covers</title>
-<meta name="description" content="A prayer of commitment and surrender to the love of Jesus.">
 
 <style>
 
-/* COLOR PALETTE */
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
   --yellow: #f4c542;
-  --blue: #4a90a4;
   --green: #6a994e;
 }
 
@@ -28,41 +25,45 @@
 
 /* BODY */
 body {
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
   line-height: 1.9;
 }
 
 /* HEADER */
-header {
+.site-header {
   background: var(--red);
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1 {
-  font-size: 2.2rem;
+/* MENU ICON */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
 }
 
 /* NAV */
-nav {
+.site-nav {
   background: var(--purple);
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   padding: 15px;
-  flex-wrap: wrap;
 }
 
-nav a {
+.site-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+.site-nav a:hover {
   color: var(--yellow);
 }
 
@@ -80,7 +81,7 @@ nav a:hover {
   font-size: 2rem;
 }
 
-/* PRAYER STYLE */
+/* PRAYER CARD */
 .prayer {
   background: white;
   padding: 40px;
@@ -90,7 +91,6 @@ nav a:hover {
 
 .prayer p {
   margin-bottom: 20px;
-  font-size: 1.05rem;
 }
 
 /* FOOTER */
@@ -102,25 +102,51 @@ footer {
   margin-top: 60px;
 }
 
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    flex-direction: column;
+    background: var(--purple);
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .site-nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .site-nav.active {
+    right: 0;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Love That Covers</h1>
-</header>
-
-<header>
-  <h1>Love That Covers</h1>
-
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" onclick="toggleMenu()">
-    ☰
+<header class="site-header">
+  <div>
+    <h1>Love That Covers</h1>
+    <p>by Bradley Hobbs</p>
   </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
-<nav id="mobileNav">
+<nav class="site-nav" id="mobileNav">
   <a href="index.html">Home</a>
   <a href="forward.html">Forward</a>
   <a href="preface.html">Preface</a>
@@ -164,10 +190,12 @@ footer {
 <footer>
   <p>© 2026 Bradley Hobbs</p>
 </footer>
+
 <script>
 function toggleMenu() {
   document.getElementById("mobileNav").classList.toggle("active");
 }
 </script>
+
 </body>
 </html>
