@@ -5,17 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Closing Thoughts | Love That Covers</title>
-<meta name="description" content="Closing Thoughts: Love That Covers">
 
 <style>
 
-/* COLOR PALETTE */
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
   --yellow: #f4c542;
-  --blue: #4a90a4;
   --green: #6a994e;
 }
 
@@ -28,41 +25,45 @@
 
 /* BODY */
 body {
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
   line-height: 1.9;
 }
 
 /* HEADER */
-header {
+.site-header {
   background: var(--red);
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1 {
-  font-size: 2.2rem;
+/* MENU ICON */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
 }
 
 /* NAV */
-nav {
+.site-nav {
   background: var(--purple);
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   padding: 15px;
-  flex-wrap: wrap;
 }
 
-nav a {
+.site-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+.site-nav a:hover {
   color: var(--yellow);
 }
 
@@ -80,9 +81,16 @@ nav a:hover {
   font-size: 2rem;
 }
 
-.container p {
+/* CARD */
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card p {
   margin-bottom: 20px;
-  font-size: 1.05rem;
 }
 
 /* FOOTER */
@@ -94,22 +102,51 @@ footer {
   margin-top: 60px;
 }
 
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    flex-direction: column;
+    background: var(--purple);
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .site-nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .site-nav.active {
+    right: 0;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Love That Covers</h1>
-  <p>by Bradley Hobbs</p>
-
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" onclick="toggleMenu()">
-    ☰
+<header class="site-header">
+  <div>
+    <h1>Love That Covers</h1>
+    <p>by Bradley Hobbs</p>
   </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
-<nav id="mobileNav">
+<nav class="site-nav" id="mobileNav">
   <a href="index.html">Home</a>
   <a href="forward.html">Forward</a>
   <a href="preface.html">Preface</a>
@@ -124,35 +161,41 @@ footer {
 
   <h2 class="page-title">Closing Thoughts</h2>
 
-  <p>
-    Love has a power that is quiet yet unstoppable. It does not demand recognition, it does not tally debts, and it does not keep score. True love covers wounds, restores what was broken, and creates space for healing to grow.
-  </p>
+  <div class="card">
 
-  <p>
-    As you have journeyed through these stories, you have seen love move across time, across generations, and across hearts in ways that transform lives. Miriam’s small act of courage, Ruth’s nurturing care, Grace and Samuel’s compassion, and Daniel’s faithful service all remind us that love is not passive, it is active, intentional, and healing.
-  </p>
+    <p>
+      Love has a power that is quiet yet unstoppable. It does not demand recognition, it does not tally debts, and it does not keep score. True love covers wounds, restores what was broken, and creates space for healing to grow.
+    </p>
 
-  <p>
-    The quilt is more than fabric. It is a living metaphor for God’s love at work. It teaches us that what begins in one heart can ripple outward, touching countless lives. Your own acts of love, mercy, and forgiveness can continue this legacy.
-  </p>
+    <p>
+      As you have journeyed through these stories, you have seen love move across time, across generations, and across hearts in ways that transform lives. Miriam’s small act of courage, Ruth’s nurturing care, Grace and Samuel’s compassion, and Daniel’s faithful service all remind us that love is not passive, it is active, intentional, and healing.
+    </p>
 
-  <p>
-    Let this book be a reminder that no wound is too deep, no shame too heavy, and no mistake too great for God’s love to cover. Allow His love to heal you and allow your heart to be a vessel through which love reaches others.
-  </p>
+    <p>
+      The quilt is more than fabric. It is a living metaphor for God’s love at work. It teaches us that what begins in one heart can ripple outward, touching countless lives. Your own acts of love, mercy, and forgiveness can continue this legacy.
+    </p>
 
-  <p>
-    May your life reflect the same grace that has carried the quilt through generations. May you forgive freely, love fiercely, and heal patiently. And may you always remember love covers, restores, and multiplies, leaving a legacy that never ends.
-  </p>
+    <p>
+      Let this book be a reminder that no wound is too deep, no shame too heavy, and no mistake too great for God’s love to cover. Allow His love to heal you and allow your heart to be a vessel through which love reaches others.
+    </p>
+
+    <p>
+      May your life reflect the same grace that has carried the quilt through generations. May you forgive freely, love fiercely, and heal patiently. And may you always remember love covers, restores, and multiplies, leaving a legacy that never ends.
+    </p>
+
+  </div>
 
 </div>
 
 <footer>
   <p>© 2026 Bradley Hobbs</p>
 </footer>
+
 <script>
 function toggleMenu() {
   document.getElementById("mobileNav").classList.toggle("active");
 }
 </script>
+
 </body>
 </html>
