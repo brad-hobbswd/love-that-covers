@@ -38,9 +38,10 @@ body {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-/* MENU */
+/* MENU ICON */
 .menu-toggle {
   font-size: 28px;
   cursor: pointer;
@@ -62,6 +63,10 @@ body {
   font-weight: bold;
 }
 
+.site-nav a:hover {
+  color: var(--yellow);
+}
+
 /* DROPDOWN */
 .dropdown {
   position: relative;
@@ -74,11 +79,13 @@ body {
   top: 100%;
   left: 0;
   min-width: 200px;
+  z-index: 1001;
 }
 
 .dropdown-content a {
   display: block;
-  padding: 10px;
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .dropdown:hover .dropdown-content {
@@ -108,6 +115,25 @@ p {
   margin-bottom: 20px;
 }
 
+/* CHAPTER NAV */
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.nav-btn:hover {
+  background: var(--purple);
+}
+
 /* FOOTER */
 footer {
   background: var(--purple);
@@ -132,13 +158,20 @@ footer {
     width: 260px;
     flex-direction: column;
     padding-top: 80px;
-    transition: 0.3s;
+    transition: right 0.3s ease;
+    z-index: 1000;
   }
 
   .site-nav.active {
     right: 0;
   }
 
+  .site-nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* MOBILE DROPDOWN ALWAYS OPEN */
   .dropdown-content {
     display: block;
     position: static;
@@ -165,6 +198,7 @@ footer {
   <a href="forward.html">Forward</a>
   <a href="preface.html">Preface</a>
 
+  <!-- DROPDOWN -->
   <div class="dropdown">
     <a href="stories.html">Stories ▾</a>
     <div class="dropdown-content">
@@ -203,6 +237,12 @@ footer {
   <p>
     For Ruth, the quilt became a symbol. It was proof that even in the coldest and darkest seasons, love could heal, restore, and bring life back into broken spaces.
   </p>
+
+  <!-- NAVIGATION -->
+  <div class="chapter-nav">
+    <a href="chapter1.html" class="nav-btn">← Previous Chapter</a>
+    <a href="chapter3.html" class="nav-btn">Next Chapter →</a>
+  </div>
 
 </div>
 
