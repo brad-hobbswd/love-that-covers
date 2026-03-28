@@ -9,6 +9,44 @@
 
 <style>
 
+/* QUICK LINKS */
+.quick-links {
+  padding: 40px 20px;
+}
+
+.card-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.mini-card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--purple);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mini-card h4 {
+  color: var(--red);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.mini-card p {
+  font-size: 0.9rem;
+}
+
+.mini-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
 /* COLOR PALETTE */
 :root {
   --cream: #f6e7c1;
