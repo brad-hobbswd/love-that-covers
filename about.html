@@ -8,27 +8,27 @@
 
 <style>
 
+/* SAME STYLE SYSTEM */
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
   --yellow: #f4c542;
+  --blue: #4a90a4;
   --green: #6a994e;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 /* HEADER */
@@ -41,14 +41,13 @@ header {
   align-items: center;
 }
 
-/* MENU ICON */
 .menu-toggle {
   font-size: 28px;
   cursor: pointer;
   display: none;
 }
 
-/* NAV DESKTOP */
+/* NAV */
 nav {
   background: var(--purple);
   display: flex;
@@ -67,9 +66,52 @@ nav a:hover {
   color: var(--yellow);
 }
 
-/* MOBILE NAV */
-@media (max-width: 768px) {
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
 
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+/* CONTENT GRID STYLE MATCH */
+.card-grid {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* CARD */
+.resource-card {
+  background: white;
+  padding: 30px;
+  border-radius: 6px;
+  color: var(--purple);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.resource-card p {
+  margin-bottom: 18px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--purple);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
@@ -84,12 +126,6 @@ nav a:hover {
     background: var(--purple);
     padding-top: 80px;
     transition: right 0.3s ease;
-    z-index: 1000;
-  }
-
-  nav a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
   nav.active {
@@ -97,47 +133,12 @@ nav a:hover {
   }
 }
 
-/* CONTENT */
-.container {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-.page-title {
-  text-align: center;
-  margin-bottom: 40px;
-  color: var(--red);
-  font-size: 2rem;
-}
-
-/* CARD */
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.card p {
-  margin-bottom: 20px;
-}
-
-/* FOOTER */
-footer {
-  background: var(--purple);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-
+</style>
 </head>
 
 <body>
 
-<header class="site-header">
+<header>
   <div>
     <h1>Love That Covers</h1>
     <p>by Bradley Hobbs</p>
@@ -153,51 +154,54 @@ footer {
   <a href="stories.html">Stories</a>
   <a href="store.html">Store</a>
   <a href="about.html">About</a>
-  <a href="resources.html">Resources</a> <!-- NEW -->
+  <a href="resources.html">Resources</a>
   <a href="closing.html">Closing</a>
   <a href="prayer.html">Prayer</a>
 </nav>
 
-<div class="container">
-
-  <h2 class="page-title">About the Author</h2>
-  
-<center><p style="font-style: italic; color: var(--text-muted);">
-A voice for healing, identity, and a love that restores what was once broken.
-</p></center>
-
-  <div class="card">
-
+<!-- HERO -->
+<section class="hero">
+  <h1>About the Author</h1>
   <p>
-  Bradley Hobbs is a writer, teacher, and storyteller with a deep passion for healing, restoration, and the transforming love of Jesus. His work is shaped by personal experiences of navigating pain, forgiveness, and renewal, offering readers a message grounded in mercy, truth, and hope.
-</p>
+    A voice for healing, identity, and a love that restores what was once broken.
+  </p>
+</section>
 
-<p>
-  With a heart for those who have felt unseen, silenced, or overlooked, Brad writes to restore a sense of belonging and identity. His voice carries compassion and honesty, inviting readers into a journey where love reaches into broken places and gently brings healing.
-</p>
+<!-- CONTENT -->
+<section class="card-grid">
 
-<p>
-  Brad holds a background in Information Technology and Business Management and has spent over six years teaching and mentoring both children and adults. His passion for education was deeply influenced by his son, Gabriel, whose life inspired him to step into teaching and invest in others with patience, care, and purpose.
-</p>
+  <div class="resource-card">
 
-<p>
-  A passionate communicator, Brad believes stories carry a unique power to reach the heart. Through narrative, he reveals that God’s love is not distant or reserved, but active, generational, and transformative. His writing reflects a life shaped through both joy and hardship, where even the most difficult seasons became places of growth and renewal.
-</p>
+    <p>
+      Bradley Hobbs is a writer, teacher, and storyteller with a deep passion for healing, restoration, and the transforming love of Jesus. His work is shaped by personal experiences of navigating pain, forgiveness, and renewal, offering readers a message grounded in mercy, truth, and hope.
+    </p>
 
-<p>
-  In addition to <em>Love That Covers</em>, Brad continues to write devotionals and works for readers of all ages, including children. His mission remains clear: to help others encounter the love of Jesus, embrace their identity, and walk confidently in truth without fear or shame.
-</p>
+    <p>
+      With a heart for those who have felt unseen, silenced, or overlooked, Brad writes to restore a sense of belonging and identity. His voice carries compassion and honesty, inviting readers into a journey where love reaches into broken places and gently brings healing.
+    </p>
 
-<p>
-  When he is not writing, Brad enjoys mentoring, teaching, and creating meaningful spaces where others can experience encouragement and hope. His life and work stand as a reminder that love does more than cover. Love restores, heals, and multiplies across generations.
-</p>
+    <p>
+      Brad holds a background in Information Technology and Business Management and has spent over six years teaching and mentoring both children and adults. His passion for education was deeply influenced by his son, Gabriel, whose life inspired him to step into teaching and invest in others with patience, care, and purpose.
+    </p>
+
+    <p>
+      A passionate communicator, Brad believes stories carry a unique power to reach the heart. Through narrative, he reveals that God’s love is active, generational, and transformative. His writing reflects a life shaped through both joy and hardship, where even the most difficult seasons became places of growth and renewal.
+    </p>
+
+    <p>
+      In addition to <em>Love That Covers</em>, Brad continues to write devotionals and works for readers of all ages. His mission is to help others encounter the love of Jesus, embrace their identity, and walk confidently in truth.
+    </p>
+
+    <p>
+      When he is not writing, Brad enjoys mentoring, teaching, and creating meaningful spaces where others can experience encouragement and hope. His life stands as a reminder that love restores, heals, and multiplies.
+    </p>
 
   </div>
 
-</div>
+</section>
 
 <footer>
-  <p>© 2026 Bradley Hobbs</p>
+  <p>© 2026 Bradley Hobbs | Love That Covers</p>
 </footer>
 
 <script>
