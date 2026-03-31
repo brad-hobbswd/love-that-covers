@@ -8,31 +8,31 @@
 
 <style>
 
+/* SAME STYLE SYSTEM */
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
   --yellow: #f4c542;
+  --blue: #4a90a4;
   --green: #6a994e;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 /* HEADER */
-.site-header {
+header {
   background: var(--red);
   color: white;
   padding: 20px 40px;
@@ -41,7 +41,6 @@ body {
   align-items: center;
 }
 
-/* MENU ICON */
 .menu-toggle {
   font-size: 28px;
   cursor: pointer;
@@ -49,48 +48,56 @@ body {
 }
 
 /* NAV */
-.nav {
+nav {
   background: var(--purple);
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   padding: 15px;
 }
 
-.nav a {
+nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav a:hover {
+nav a:hover {
   color: var(--yellow);
 }
 
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
 /* CONTENT */
-.container {
-  max-width: 800px;
-  margin: 60px auto;
+.card-grid {
+  max-width: 900px;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
-.page-title {
-  text-align: center;
-  margin-bottom: 40px;
-  color: var(--red);
-  font-size: 2rem;
-}
-
-/* CARD */
-.card {
+.resource-card {
   background: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  padding: 30px;
+  border-radius: 6px;
+  color: var(--purple);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
 }
 
-.card p {
-  margin-bottom: 20px;
+.resource-card p {
+  margin-bottom: 18px;
 }
 
 /* FOOTER */
@@ -99,17 +106,16 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
-/* MOBILE NAV */
+/* MOBILE */
 @media (max-width: 768px) {
-
   .menu-toggle {
     display: block;
   }
 
-  .site-nav {
+  nav {
     position: fixed;
     top: 0;
     right: -260px;
@@ -119,15 +125,9 @@ footer {
     background: var(--purple);
     padding-top: 80px;
     transition: right 0.3s ease;
-    z-index: 1000;
   }
 
-  .site-nav a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  .site-nav.active {
+  nav.active {
     right: 0;
   }
 }
@@ -137,7 +137,7 @@ footer {
 
 <body>
 
-<header class="site-header">
+<header>
   <div>
     <h1>Love That Covers</h1>
     <p>by Bradley Hobbs</p>
@@ -153,43 +153,50 @@ footer {
   <a href="stories.html">Stories</a>
   <a href="store.html">Store</a>
   <a href="about.html">About</a>
-  <a href="resources.html">Resources</a> <!-- NEW -->
+  <a href="resources.html">Resources</a>
   <a href="closing.html">Closing</a>
   <a href="prayer.html">Prayer</a>
 </nav>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <h1>Closing Thoughts</h1>
+  <p>
+    Love continues beyond every chapter, every story, and every moment.
+  </p>
+</section>
 
-  <h2 class="page-title">Closing Thoughts</h2>
+<!-- CONTENT -->
+<section class="card-grid">
 
-  <div class="card">
+  <div class="resource-card">
 
     <p>
-      Love has a power that is quiet yet unstoppable. It does not demand recognition, it does not tally debts, and it does not keep score. True love covers wounds, restores what was broken, and creates space for healing to grow.
+      Love has a power that is quiet yet unstoppable. It does not demand recognition, it does not keep score, and it does not hold past failures against us. Love restores what was broken and creates space for healing to grow.
     </p>
 
     <p>
-      As you have journeyed through these stories, you have seen love move across time, across generations, and across hearts in ways that transform lives. Miriam’s small act of courage, Ruth’s nurturing care, Grace and Samuel’s compassion, and Daniel’s faithful service all remind us that love is not passive, it is active, intentional, and healing.
+      Through these stories, love has moved across time, across generations, and across lives. Each act of compassion, each moment of grace, reveals that love is not passive. Love is active, intentional, and deeply transformative.
     </p>
 
     <p>
-      The quilt is more than fabric. It is a living metaphor for God’s love at work. It teaches us that what begins in one heart can ripple outward, touching countless lives. Your own acts of love, mercy, and forgiveness can continue this legacy.
+      The quilt represents more than fabric. It reflects a living testimony that what begins in one heart can extend far beyond what we see. Every act of mercy and forgiveness continues a legacy that reaches others.
     </p>
 
     <p>
-      Let this book be a reminder that no wound is too deep, no shame too heavy, and no mistake too great for God’s love to cover. Allow His love to heal you and allow your heart to be a vessel through which love reaches others.
+      Let this be a reminder that no wound is too deep and no story is beyond redemption. God’s love reaches into every place and brings restoration where hope once felt distant.
     </p>
 
     <p>
-      May your life reflect the same grace that has carried the quilt through generations. May you forgive freely, love fiercely, and heal patiently. And may you always remember love covers, restores, and multiplies, leaving a legacy that never ends.
+      May your life carry this same grace. May love guide your steps, shape your actions, and multiply through every life you touch.
     </p>
 
   </div>
 
-</div>
+</section>
 
 <footer>
-  <p>© 2026 Bradley Hobbs</p>
+  <p>© 2026 Bradley Hobbs | Love That Covers</p>
 </footer>
 
 <script>
