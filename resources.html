@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resources | Love That Covers</title>
+
+<style>
+
+/* USE SAME STYLES FROM INDEX */
+:root {
+  --cream: #f6e7c1;
+  --red: #e63946;
+  --purple: #5a3e6b;
+  --yellow: #f4c542;
+  --blue: #4a90a4;
+  --green: #6a994e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: var(--cream);
+  color: var(--purple);
+  line-height: 1.8;
+}
+
+/* HEADER */
+header {
+  background: var(--red);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAV */
+nav {
+  background: var(--purple);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--yellow);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+/* GRID */
+.card-grid {
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* CARD */
+.resource-card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--purple);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  transition: 0.2s;
+}
+
+.resource-card h3 {
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+}
+
+/* FOOTER */
+footer {
+  background: var(--purple);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    flex-direction: column;
+    background: var(--purple);
+    padding-top: 80px;
+    transition: right 0.3s ease;
+  }
+
+  nav.active {
+    right: 0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>Love That Covers</h1>
+    <p>by Bradley Hobbs</p>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="forward.html">Forward</a>
+  <a href="preface.html">Preface</a>
+  <a href="stories.html">Stories</a>
+  <a href="store.html">Store</a>
+  <a href="about.html">About</a>
+  <a href="resources.html">Resources</a> <!-- NEW -->
+  <a href="closing.html">Closing</a>
+  <a href="prayer.html">Prayer</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Resources</h1>
+  <p>
+    This journey continues beyond the pages. These resources are here to support healing,
+    growth, and a deeper understanding of love that restores.
+  </p>
+</section>
+
+<!-- RESOURCES -->
+<section class="card-grid">
+
+  <div class="resource-card">
+    <h3>Love That Covers (Original)</h3>
+    <p>The foundation of this message of healing, grace, and restoration.</p>
+    <a href="https://brad-hobbswd.github.io/love-that-covers/">Visit →</a>
+  </div>
+
+  <div class="resource-card">
+    <h3>Jason Memoir</h3>
+    <p>A short story exploring overwhelm, silence, and awakening.</p>
+    <a href="https://brad-hobbswd.github.io/ignored-overwhelmed-jason-memoir/">Read →</a>
+  </div>
+
+  <div class="resource-card">
+    <h3>Whispers in the Pew</h3>
+    <p>A devotional journey centered on healing, truth, and quiet faith.</p>
+    <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Visit →</a>
+  </div>
+
+  <div class="resource-card">
+    <h3>About Me</h3>
+    <p>Learn more about the heart, story, and journey behind the writing.</p>
+    <a href="https://brad-hobbswd.github.io/about-me/">Visit →</a>
+  </div>
+
+  <div class="resource-card">
+    <h3>Web Design Work</h3>
+    <p>Creative projects built with clarity, purpose, and intention.</p>
+    <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Visit →</a>
+  </div>
+
+  <div class="resource-card">
+    <h3>Bethesda Tabernacle</h3>
+    <p>A spiritual community that has been part of growth and faith.</p>
+    <a href="https://www.mercyforyou.org">Visit →</a>
+  </div>
+
+  <div class="resource-card">
+    <h3>Bible Institute</h3>
+    <p>A place of deeper study and understanding of God.</p>
+    <a href="https://www.bapbi.net">Visit →</a>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Bradley Hobbs | Love That Covers</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileNav").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
