@@ -8,31 +8,31 @@
 
 <style>
 
+/* SAME STYLE SYSTEM */
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
   --yellow: #f4c542;
+  --blue: #4a90a4;
   --green: #6a994e;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 /* HEADER */
-.site-header {
+header {
   background: var(--red);
   color: white;
   padding: 20px 40px;
@@ -41,7 +41,6 @@ body {
   align-items: center;
 }
 
-/* MENU ICON */
 .menu-toggle {
   font-size: 28px;
   cursor: pointer;
@@ -49,48 +48,56 @@ body {
 }
 
 /* NAV */
-.nav {
+nav {
   background: var(--purple);
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   padding: 15px;
 }
 
-.nav a {
+nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav a:hover {
+nav a:hover {
   color: var(--yellow);
 }
 
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
 /* CONTENT */
-.container {
-  max-width: 800px;
-  margin: 60px auto;
+.card-grid {
+  max-width: 900px;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
-.page-title {
-  text-align: center;
-  margin-bottom: 40px;
-  color: var(--red);
-  font-size: 2rem;
-}
-
-/* CARD */
-.card {
+.resource-card {
   background: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  padding: 30px;
+  border-radius: 6px;
+  color: var(--purple);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
 }
 
-.card p {
-  margin-bottom: 20px;
+.resource-card p {
+  margin-bottom: 18px;
 }
 
 /* FOOTER */
@@ -99,17 +106,16 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
-/* MOBILE NAV */
+/* MOBILE */
 @media (max-width: 768px) {
-
   .menu-toggle {
     display: block;
   }
 
-  .site-nav {
+  nav {
     position: fixed;
     top: 0;
     right: -260px;
@@ -119,15 +125,9 @@ footer {
     background: var(--purple);
     padding-top: 80px;
     transition: right 0.3s ease;
-    z-index: 1000;
   }
 
-  .site-nav a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  .site-nav.active {
+  nav.active {
     right: 0;
   }
 }
@@ -153,39 +153,46 @@ footer {
   <a href="stories.html">Stories</a>
   <a href="store.html">Store</a>
   <a href="about.html">About</a>
-  <a href="resources.html">Resources</a> <!-- NEW -->
+  <a href="resources.html">Resources</a>
   <a href="closing.html">Closing</a>
   <a href="prayer.html">Prayer</a>
 </nav>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <h1>Preface</h1>
+  <p>
+    An invitation into a story of healing, grace, and the power of love that restores.
+  </p>
+</section>
 
-  <h2 class="page-title">Preface</h2>
+<!-- CONTENT -->
+<section class="card-grid">
 
-  <div class="card">
+  <div class="resource-card">
 
     <p>
-      This book began as a reflection on the power of love to heal, restore, and transform. In life, we all encounter moments of pain, breakdown, and loss. Sometimes we carry guilt for our own mistakes. Sometimes we are wounded by the actions of others. And yet, through it all, God’s love has a way of covering what is broken, whispering grace into our hearts, and inviting us to extend that same mercy to those around us.
+      This book began as a reflection on the power of love to heal, restore, and transform. In life, moments of pain, loss, and brokenness often shape the way we see ourselves and others. Yet through it all, God’s love continues to cover what is wounded and gently invites restoration.
     </p>
 
     <p>
-      Love That Covers is a story about the ripple effect of love. It shows how one act of compassion, one choice to forgive, and one gesture of kindness can travel far beyond what we can see. Through the generations in this story; Miriam, Ruth, Grace, Samuel, and Daniel; you will witness how God’s love moves in quiet, powerful ways, reaching hearts that may feel unseen or unworthy.
+      Love That Covers reveals the ripple effect of love. One act of compassion, one choice to forgive, and one moment of mercy can extend far beyond what is visible. Through the lives of Miriam, Ruth, Grace, Samuel, and Daniel, the story unfolds as a testimony of how love moves across generations.
     </p>
 
     <p>
-      This book is not just a story. It is an invitation. An invitation to reflect on the ways God’s love has reached you, the ways you can let that love cover your own wounds, and the ways you can be a channel of healing in the lives of others. It is a testament to the enduring truth that love is stronger than shame, forgiveness is stronger than resentment, and mercy is stronger than fear.
+      This is more than a story. This is an invitation to reflect on the ways love has reached you and the ways you can allow that same love to flow through your life. Healing begins where love is received, and transformation begins where love is given.
     </p>
 
     <p>
-      As you read these pages, may you feel the gentle yet transformative power of love. May you see how God works through ordinary people to accomplish extraordinary healing. And may you be encouraged to live a life that covers, restores, and multiplies love wherever it is needed.
+      May these pages remind you that love is stronger than shame, forgiveness is stronger than resentment, and mercy always has the final word. May your life become a place where love covers, restores, and multiplies.
     </p>
 
   </div>
 
-</div>
+</section>
 
 <footer>
-  <p>© 2026 Bradley Hobbs</p>
+  <p>© 2026 Bradley Hobbs | Love That Covers</p>
 </footer>
 
 <script>
