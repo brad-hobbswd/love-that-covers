@@ -8,31 +8,31 @@
 
 <style>
 
+/* SAME STYLE SYSTEM */
 :root {
   --cream: #f6e7c1;
   --red: #e63946;
   --purple: #5a3e6b;
   --yellow: #f4c542;
+  --blue: #4a90a4;
   --green: #6a994e;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: Georgia, serif;
   background: var(--cream);
   color: var(--purple);
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 /* HEADER */
-.site-header {
+header {
   background: var(--red);
   color: white;
   padding: 20px 40px;
@@ -41,7 +41,6 @@ body {
   align-items: center;
 }
 
-/* MENU ICON */
 .menu-toggle {
   font-size: 28px;
   cursor: pointer;
@@ -49,48 +48,56 @@ body {
 }
 
 /* NAV */
-.nav {
+nav {
   background: var(--purple);
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   padding: 15px;
 }
 
-.nav a {
+nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav a:hover {
+nav a:hover {
   color: var(--yellow);
 }
 
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
 /* CONTENT */
-.container {
-  max-width: 800px;
-  margin: 60px auto;
+.card-grid {
+  max-width: 900px;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
-.page-title {
-  text-align: center;
-  margin-bottom: 40px;
-  color: var(--red);
-  font-size: 2rem;
-}
-
-/* CARD */
-.card {
+.resource-card {
   background: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  padding: 30px;
+  border-radius: 6px;
+  color: var(--purple);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
 }
 
-.card p {
-  margin-bottom: 20px;
+.resource-card p {
+  margin-bottom: 18px;
 }
 
 /* FOOTER */
@@ -99,17 +106,16 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
-/* MOBILE NAV */
+/* MOBILE */
 @media (max-width: 768px) {
-
   .menu-toggle {
     display: block;
   }
 
-  .site-nav {
+  nav {
     position: fixed;
     top: 0;
     right: -260px;
@@ -119,15 +125,9 @@ footer {
     background: var(--purple);
     padding-top: 80px;
     transition: right 0.3s ease;
-    z-index: 1000;
   }
 
-  .site-nav a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  .site-nav.active {
+  nav.active {
     right: 0;
   }
 }
@@ -153,39 +153,46 @@ footer {
   <a href="stories.html">Stories</a>
   <a href="store.html">Store</a>
   <a href="about.html">About</a>
-  <a href="resources.html">Resources</a> <!-- NEW -->
+  <a href="resources.html">Resources</a>
   <a href="closing.html">Closing</a>
   <a href="prayer.html">Prayer</a>
 </nav>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <h1>Forward</h1>
+  <p>
+    Love is more than a feeling. Love is action, mercy, and the quiet power that transforms lives.
+  </p>
+</section>
 
-  <h2 class="page-title">Forward</h2>
+<!-- CONTENT -->
+<section class="card-grid">
 
-  <div class="card">
+  <div class="resource-card">
 
     <p>
       There are moments in life when we are reminded that love is more than a feeling. It is an action, a choice, and sometimes a quiet sacrifice that changes everything. Love That Covers is a story of love that sees pain, acknowledges mistakes, and chooses mercy above judgment.
     </p>
 
     <p>
-      Through the lives of Miriam, Ruth, Grace, Samuel, and Daniel, we witness how God’s love moves in tangible ways. It begins with a single act of compassion, like a piece of fabric placed in a quilt, and extends across time, touching generations and transforming hearts. The quilt is more than a symbol; it is a living testament to how God’s love covers our wounds, heals our hearts, and inspires us to extend grace to others.
+      Through the lives of Miriam, Ruth, Grace, Samuel, and Daniel, we witness how God’s love moves in tangible ways. It begins with a single act of compassion and extends across time, touching generations and transforming hearts.
     </p>
 
     <p>
-      This book invites you to step into a world where love is patient, steadfast, and restorative. It encourages reflection on your own life: on the ways love has healed you, the ways mercy has found you in your darkest moments, and the ways you can become a channel of that love in the lives of others.
+      This book invites reflection on your own life. It calls you to consider how love has healed you, how mercy has found you, and how your life can become a channel of that same love.
     </p>
 
     <p>
-      As you read, allow the stories to remind you that healing is possible, that forgiveness is powerful, and that love, when extended with intention and grace, never fails. May this book inspire you to carry love forward, to cover what needs covering, and to trust that God’s love is always at work, even in the smallest of acts.
+      May these pages remind you that healing is possible, forgiveness is powerful, and love, when lived with intention, never fails.
     </p>
 
   </div>
 
-</div>
+</section>
 
 <footer>
-  <p>© 2026 Bradley Hobbs</p>
+  <p>© 2026 Bradley Hobbs | Love That Covers</p>
 </footer>
 
 <script>
