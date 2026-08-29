@@ -3,303 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Store | Love That Covers</title>
-
-<style>
-
-/* SAME SYSTEM */
-:root {
-  --cream: #f6e7c1;
-  --red: #e63946;
-  --purple: #5a3e6b;
-  --green: #6a994e;
-  --yellow: #f4c542;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia, serif;
-  background: var(--cream);
-  color: var(--purple);
-}
-
-/* HEADER */
-header {
-  background: var(--red);
-  color: white;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-toggle {
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-}
-
-/* NAV */
-nav {
-  background: var(--purple);
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--yellow);
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 50px 20px 10px;
-}
-
-.hero h1 {
-  font-size: 2.2rem;
-}
-
-/* BOOK SECTION */
-.book-container {
-  max-width: 1000px;
-  margin: 40px auto;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.book-image img {
-  width: 240px; /* slightly refined */
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.book-info {
-  flex: 1;
-}
-
-.book-info h2 {
-  color: var(--red);
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.book-info p {
-  margin-bottom: 15px;
-}
-
-.tagline {
-  font-style: italic;
-  margin-bottom: 15px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background: var(--green);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background: var(--purple);
-}
-
-/* FEATURES */
-.features {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.features h3 {
-  color: var(--red);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.features ul {
-  list-style: none;
-}
-
-.features li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.features li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--green);
-}
-
-/* TESTIMONIAL */
-.testimonial {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.testimonial p {
-  font-style: italic;
-}
-
-/* FOOTER */
-footer {
-  background: var(--purple);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    position: fixed;
-    right: -260px;
-    top: 0;
-    height: 100%;
-    width: 260px;
-    flex-direction: column;
-    padding-top: 80px;
-    transition: right 0.3s ease;
-  }
-
-  nav.active {
-    right: 0;
-  }
-
-  nav a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  .book-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .book-image img {
-    width: 180px;
-  }
-}
-
-</style>
+<meta name="description" content="Get Love That Covers by Bradley Hobbs, a story of healing, restoration, mercy, and love across generations.">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<header>
-  <div>
-    <h1>Love That Covers</h1>
-    <p>by Bradley Hobbs</p>
-  </div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
-
-<nav id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="forward.html">Forward</a>
-  <a href="preface.html">Preface</a>
-  <a href="stories.html">Stories</a>
-  <a href="store.html">Store</a>
-  <a href="about.html">About</a>
-  <a href="resources.html">Resources</a>
-  <a href="closing.html">Closing</a>
-  <a href="prayer.html">Prayer</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-title">Love That Covers</span><span class="brand-author">Bradley Hobbs</span></a>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+<nav class="site-nav" id="siteNav" aria-label="Main navigation">
+<a href="index.html">Home</a><a href="forward.html">Forward</a><a href="preface.html">Preface</a><a href="stories.html">Stories</a><a href="store.html">Store</a><a href="about.html">About</a><a href="resources.html">Resources</a><a href="closing.html">Closing</a><a href="prayer.html">Prayer</a>
 </nav>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Store</h1>
-</section>
-
-<!-- BOOK -->
-<div class="book-container">
-
-  <div class="book-image">
-    <img src="IMG_0896.png" alt="Love That Covers Book Cover">
-  </div>
-
-  <div class="book-info">
-    <h2>Love That Covers</h2>
-    <p><strong>by Bradley Hobbs</strong></p>
-
-    <p class="tagline">
-      A story that carries love across generations.
-    </p>
-
-    <p>
-      Real stories of healing, restoration, and the power of love that covers. 
-      This journey reveals how mercy, compassion, and grace transform lives across time.
-    </p>
-
-    <p><strong>Coming Soon on Amazon</strong></p>
-
-    <a href="#" class="btn">Buy on Amazon</a>
-  </div>
-
 </div>
-
-<!-- FEATURES -->
-<div class="features">
-  <h3>What You’ll Experience</h3>
-  <ul>
-    <li>Stories rooted in healing and restoration</li>
-    <li>Generational impact of love and mercy</li>
-    <li>Faith-centered transformation</li>
-    <li>Encouragement for personal growth</li>
-  </ul>
-</div>
-
-<!-- TESTIMONIAL -->
-<div class="testimonial">
-  <p>
-    “A powerful reminder that love reaches farther than we ever imagine.”
-  </p>
-</div>
-
-<footer>
-  <p>© 2026 Bradley Hobbs | Love That Covers</p>
-</footer>
-
+</header>
+<main>
+<section class="page-hero"><div class="container"><div class="eyebrow">Bring the story home</div><h1>Store</h1><p>Love That Covers is a story of healing, restoration, mercy, and the love that reaches across generations.</p></div></section>
+<section class="section"><div class="container"><div class="intro">
+<div class="book-image"><img src="IMG_0896.png" alt="Love That Covers book cover"></div>
+<div class="intro-card"><div class="eyebrow">The book</div><h2>Love That Covers</h2><p><strong>by Bradley Hobbs</strong></p><p class="tagline">A story that carries love across generations.</p><p>Real stories of healing, restoration, and the power of love that covers. This journey reveals how mercy, compassion, and grace can transform lives across time.</p><div class="actions"><span class="button button-primary" aria-disabled="true">Coming Soon</span></div><p style="margin-top:18px;color:var(--muted);font-size:.9rem;">The Amazon purchase link will be added when the book is available.</p></div>
+</div></div></section>
+<section class="section section-soft"><div class="container"><div class="section-heading"><div class="eyebrow">Inside the journey</div><h2>What you will experience</h2><p>The book invites readers into a journey that moves beyond simply reading a story.</p></div><div class="grid">
+<div class="card"><div class="card-number">01</div><h3>Healing &amp; Restoration</h3><p>Stories rooted in the reality that wounded places can become places of growth and restoration.</p></div>
+<div class="card"><div class="card-number">02</div><h3>Love Across Generations</h3><p>See how one act of compassion can reach farther than we ever expected.</p></div>
+<div class="card"><div class="card-number">03</div><h3>Faith &amp; Transformation</h3><p>Reflect on how mercy, grace, and faith can change the direction of a life.</p></div>
+<div class="card"><div class="card-number">04</div><h3>Personal Growth</h3><p>Consider what it means to receive love, extend forgiveness, and become a source of encouragement.</p></div>
+</div></div></section>
+<section class="section"><div class="container"><div class="cta"><div><div class="eyebrow">A reminder for the journey</div><h2>Love reaches farther than we imagine.</h2><p>Keep exploring the stories behind Love That Covers while the book moves toward publication.</p></div><div class="actions"><a class="button button-primary" href="stories.html">Explore the Stories</a><a class="button button-secondary" href="prayer.html">Prayer</a></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>Love That Covers</h3><p>A journey through love, healing, truth, forgiveness, and the restoring love of Jesus.</p></div><div><h3>Explore</h3><a href="stories.html">Stories</a><a href="resources.html">Resources</a><a href="prayer.html">Prayer</a></div><div><h3>Connect</h3><a href="about.html">About the Author</a><a href="closing.html">Closing Thoughts</a><a href="forward.html">Forward</a></div></div><div class="footer-bottom">© 2026 Bradley Hobbs | Love That Covers</div></div></footer>
 <script>
-function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("active");
-}
+function toggleMenu(){const nav=document.getElementById('siteNav');const button=document.querySelector('.menu-toggle');const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open?'true':'false');button.setAttribute('aria-label',open?'Close navigation':'Open navigation');}
+document.querySelectorAll('.site-nav a').forEach(link=>link.addEventListener('click',()=>{document.getElementById('siteNav').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');document.querySelector('.menu-toggle').setAttribute('aria-label','Open navigation');}));
 </script>
-
 </body>
 </html>
