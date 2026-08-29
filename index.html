@@ -8,46 +8,19 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header class="site-header">
 <div class="container header-inner">
-<a class="brand" href="index.html">
-<span class="brand-title">Love That Covers</span>
-<span class="brand-author">Bradley Hobbs</span>
-</a>
-<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+<a class="brand" href="index.html"><span class="brand-title">Love That Covers</span><span class="brand-author">Bradley Hobbs</span></a>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
 <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-<a href="index.html">Home</a>
-<a href="forward.html">Forward</a>
-<a href="preface.html">Preface</a>
-<a href="stories.html">Stories</a>
-<a href="store.html">Store</a>
-<a href="about.html">About</a>
-<a href="resources.html">Resources</a>
-<a href="closing.html">Closing</a>
-<a href="prayer.html">Prayer</a>
+<a href="index.html">Home</a><a href="forward.html">Forward</a><a href="preface.html">Preface</a><a href="stories.html">Stories</a><a href="store.html">Store</a><a href="about.html">About</a><a href="resources.html">Resources</a><a href="closing.html">Closing</a><a href="prayer.html">Prayer</a>
 </nav>
 </div>
 </header>
-
 <main>
 <section class="hero">
 <img class="hero-image" src="B301321B-BF15-4B34-BEE3-1EFD43D70DFA.png" alt="Love That Covers book artwork">
-<div class="hero-content">
-<div class="container">
-<div class="hero-copy">
-<div class="eyebrow">A story of love, healing, and restoration</div>
-<h1>Love That Covers<span>Real stories. Honest wounds. The love of Jesus that restores.</span></h1>
-<p>Some wounds are carried quietly. Some stories take years to understand. Yet love can reach places pain could not, and grace can begin restoring what life has broken.</p>
-<div class="actions">
-<a class="button button-primary" href="stories.html">Read the Stories</a>
-<a class="button button-secondary" href="store.html">Get the Book</a>
-</div>
-</div>
-</div>
-</div>
 </section>
-
 <section class="section">
 <div class="container intro">
 <div class="intro-card">
@@ -55,18 +28,14 @@
 <h2>Love does not ignore the wound. It covers it with grace.</h2>
 <p><strong>Love That Covers</strong> explores the places where hurt, disappointment, forgiveness, family, faith, and healing meet.</p>
 <p>This is not a story about pretending pain never happened. It is an invitation to discover what Jesus can do with the places we thought could never be restored.</p>
+<div class="actions"><a class="button button-primary" href="stories.html">Read the Stories</a><a class="button button-secondary" href="store.html">Get the Book</a></div>
 </div>
 <div class="pullquote">“Healing does not erase the story. It changes what the story is able to produce.”</div>
 </div>
 </section>
-
 <section class="section section-soft">
 <div class="container">
-<div class="section-heading">
-<div class="eyebrow">Begin the journey</div>
-<h2>Walk through the story</h2>
-<p>Move at your own pace through the pages, reflections, prayers, and resources created around Love That Covers.</p>
-</div>
+<div class="section-heading"><div class="eyebrow">Begin the journey</div><h2>Walk through the story</h2><p>Move at your own pace through the pages, reflections, prayers, and resources created around Love That Covers.</p></div>
 <div class="grid">
 <a class="card" href="forward.html"><div class="card-number">Start here</div><h3>Forward</h3><p>Begin with the heart behind the story and the invitation to keep moving forward.</p></a>
 <a class="card" href="preface.html"><div class="card-number">Before the story</div><h3>Preface</h3><p>Step into the purpose behind the book and the message it carries.</p></a>
@@ -77,48 +46,12 @@
 </div>
 </div>
 </section>
-
-<section class="section">
-<div class="container">
-<div class="cta">
-<div>
-<h2>Carry the message forward.</h2>
-<p>If this story speaks to you, share it with someone who needs a reminder that their pain does not have to have the final word.</p>
-</div>
-<div class="actions">
-<a class="button button-primary" href="store.html">Find the Book</a>
-<a class="button button-secondary" href="about.html">About Bradley</a>
-</div>
-</div>
-</div>
-</section>
+<section class="section"><div class="container"><div class="cta"><div><h2>Carry the message forward.</h2><p>If this story speaks to you, share it with someone who needs a reminder that their pain does not have to have the final word.</p></div><div class="actions"><a class="button button-primary" href="store.html">Find the Book</a><a class="button button-secondary" href="about.html">About Bradley</a></div></div></div></section>
 </main>
-
-<footer class="site-footer">
-<div class="container">
-<div class="footer-grid">
-<div><h3>Love That Covers</h3><p>A journey through love, healing, truth, forgiveness, and the restoring love of Jesus.</p></div>
-<div><h3>Explore</h3><a href="stories.html">Stories</a><a href="resources.html">Resources</a><a href="prayer.html">Prayer</a></div>
-<div><h3>Connect</h3><a href="about.html">About the Author</a><a href="store.html">Get the Book</a><a href="closing.html">Closing Thoughts</a></div>
-</div>
-<div class="footer-bottom">© 2026 Bradley Hobbs | Love That Covers</div>
-</div>
-</footer>
-
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>Love That Covers</h3><p>A journey through love, healing, truth, forgiveness, and the restoring love of Jesus.</p></div><div><h3>Explore</h3><a href="stories.html">Stories</a><a href="resources.html">Resources</a><a href="prayer.html">Prayer</a></div><div><h3>Connect</h3><a href="about.html">About the Author</a><a href="store.html">Get the Book</a><a href="closing.html">Closing Thoughts</a></div></div><div class="footer-bottom">© 2026 Bradley Hobbs | Love That Covers</div></div></footer>
 <script>
-function toggleMenu(){
-const nav=document.getElementById('siteNav');
-const button=document.querySelector('.menu-toggle');
-const open=nav.classList.toggle('open');
-button.setAttribute('aria-expanded',open?'true':'false');
-button.setAttribute('aria-label',open?'Close navigation':'Open navigation');
-}
-
-document.querySelectorAll('.site-nav a').forEach(link=>link.addEventListener('click',()=>{
-document.getElementById('siteNav').classList.remove('open');
-document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
-document.querySelector('.menu-toggle').setAttribute('aria-label','Open navigation');
-}));
+function toggleMenu(){const nav=document.getElementById('siteNav');const button=document.querySelector('.menu-toggle');const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open?'true':'false');button.setAttribute('aria-label',open?'Close navigation':'Open navigation');}
+document.querySelectorAll('.site-nav a').forEach(link=>link.addEventListener('click',()=>{document.getElementById('siteNav').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');document.querySelector('.menu-toggle').setAttribute('aria-label','Open navigation');}));
 </script>
 </body>
 </html>
