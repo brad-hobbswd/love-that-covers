@@ -3,203 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Preface | Love That Covers</title>
-
-<style>
-
-/* SAME STYLE SYSTEM */
-:root {
-  --cream: #f6e7c1;
-  --red: #e63946;
-  --purple: #5a3e6b;
-  --yellow: #f4c542;
-  --blue: #4a90a4;
-  --green: #6a994e;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia, serif;
-  background: var(--cream);
-  color: var(--purple);
-  line-height: 1.8;
-}
-
-/* HEADER */
-header {
-  background: var(--red);
-  color: white;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-toggle {
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-}
-
-/* NAV */
-nav {
-  background: var(--purple);
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--yellow);
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 50px 20px 20px;
-}
-
-.hero h1 {
-  font-size: 2.2rem;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: 10px auto;
-}
-
-/* CONTENT */
-.card-grid {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.resource-card {
-  background: white;
-  padding: 30px;
-  border-radius: 6px;
-  color: var(--purple);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
-
-.resource-card p {
-  margin-bottom: 18px;
-}
-
-/* FOOTER */
-footer {
-  background: var(--purple);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    right: -260px;
-    width: 260px;
-    height: 100%;
-    flex-direction: column;
-    background: var(--purple);
-    padding-top: 80px;
-    transition: right 0.3s ease;
-  }
-
-  nav.active {
-    right: 0;
-  }
-}
-
-</style>
+<meta name="description" content="The preface to Love That Covers by Bradley Hobbs, a reflection on healing, grace, forgiveness, mercy, and the love of Jesus.">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<header>
-  <div>
-    <h1>Love That Covers</h1>
-    <p>by Bradley Hobbs</p>
-  </div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
-
-<nav id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="forward.html">Forward</a>
-  <a href="preface.html">Preface</a>
-  <a href="stories.html">Stories</a>
-  <a href="store.html">Store</a>
-  <a href="about.html">About</a>
-  <a href="resources.html">Resources</a>
-  <a href="closing.html">Closing</a>
-  <a href="prayer.html">Prayer</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-title">Love That Covers</span><span class="brand-author">Bradley Hobbs</span></a>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+<nav class="site-nav" id="siteNav" aria-label="Main navigation">
+<a href="index.html">Home</a><a href="forward.html">Forward</a><a href="preface.html" aria-current="page">Preface</a><a href="stories.html">Stories</a><a href="store.html">Store</a><a href="about.html">About</a><a href="resources.html">Resources</a><a href="closing.html">Closing</a><a href="prayer.html">Prayer</a>
 </nav>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Preface</h1>
-  <p>
-    An invitation into a story of healing, grace, and the power of love that restores.
-  </p>
+</div>
+</header>
+<main>
+<section class="page-hero">
+<div class="container">
+<div class="eyebrow" style="color:#e6c981">Before the stories</div>
+<h1>Preface</h1>
+<p>An invitation into a story of healing, grace, and the power of love that restores.</p>
+</div>
 </section>
-
-<!-- CONTENT -->
-<section class="card-grid">
-
-  <div class="resource-card">
-
-    <p>
-      This book began as a reflection on the power of love to heal, restore, and transform. In life, moments of pain, loss, and brokenness often shape the way we see ourselves and others. Yet through it all, God’s love continues to cover what is wounded and gently invites restoration.
-    </p>
-
-    <p>
-      Love That Covers reveals the ripple effect of love. One act of compassion, one choice to forgive, and one moment of mercy can extend far beyond what is visible. Through the lives of Miriam, Ruth, Grace, Samuel, and Daniel, the story unfolds as a testimony of how love moves across generations.
-    </p>
-
-    <p>
-      This is more than a story. This is an invitation to reflect on the ways love has reached you and the ways you can allow that same love to flow through your life. Healing begins where love is received, and transformation begins where love is given.
-    </p>
-
-    <p>
-      May these pages remind you that love is stronger than shame, forgiveness is stronger than resentment, and mercy always has the final word. May your life become a place where love covers, restores, and multiplies.
-    </p>
-
-  </div>
-
+<section class="section">
+<div class="container">
+<article class="reading">
+<p>This book began as a reflection on the power of love to heal, restore, and transform. In life, moments of pain, loss, and brokenness often shape the way we see ourselves and others. Yet through it all, God’s love continues to cover what is wounded and gently invites restoration.</p>
+<p>Love That Covers reveals the ripple effect of love. One act of compassion, one choice to forgive, and one moment of mercy can extend far beyond what is visible. Through the lives of Miriam, Ruth, Grace, Samuel, and Daniel, the story unfolds as a testimony of how love moves across generations.</p>
+<p>This is more than a story. This is an invitation to reflect on the ways love has reached you and the ways you can allow that same love to flow through your life. Healing begins where love is received, and transformation begins where love is given.</p>
+<p>May these pages remind you that love is stronger than shame, forgiveness is stronger than resentment, and mercy always has the final word. May your life become a place where love covers, restores, and multiplies.</p>
+<nav class="chapter-nav" aria-label="Book navigation">
+<a href="forward.html">← Forward</a>
+<a href="stories.html">Stories →</a>
+</nav>
+</article>
+</div>
 </section>
-
-<footer>
-  <p>© 2026 Bradley Hobbs | Love That Covers</p>
-</footer>
-
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>Love That Covers</h3><p>A journey through love, healing, truth, forgiveness, and the restoring love of Jesus.</p></div><div><h3>Explore</h3><a href="stories.html">Stories</a><a href="resources.html">Resources</a><a href="prayer.html">Prayer</a></div><div><h3>Connect</h3><a href="about.html">About the Author</a><a href="store.html">Get the Book</a><a href="closing.html">Closing Thoughts</a></div></div><div class="footer-bottom">© 2026 Bradley Hobbs | Love That Covers</div></div></footer>
 <script>
-function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("active");
-}
+function toggleMenu(){const nav=document.getElementById('siteNav');const button=document.querySelector('.menu-toggle');const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open?'true':'false');button.setAttribute('aria-label',open?'Close navigation':'Open navigation');}
+document.querySelectorAll('.site-nav a').forEach(link=>link.addEventListener('click',()=>{document.getElementById('siteNav').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');}));
 </script>
-
 </body>
 </html>
