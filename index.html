@@ -3,331 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Love That Covers | Bradley Hobbs</title>
-<meta name="description" content="Real stories of healing, truth, and the love of Jesus that restores.">
-
-<style>
-
-/* COLOR PALETTE */
-:root {
-  --cream: #f6e7c1;
-  --red: #e63946;
-  --purple: #5a3e6b;
-  --yellow: #f4c542;
-  --blue: #4a90a4;
-  --green: #6a994e;
-}
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
-body {
-  font-family: Georgia, serif;
-  background: var(--cream);
-  color: var(--purple);
-  line-height: 1.8;
-}
-
-/* HEADER */
-header {
-  background: var(--red);
-  color: white;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-header p {
-  font-size: 0.9rem;
-}
-
-/* MENU ICON */
-.menu-toggle {
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-}
-
-/* NAV DESKTOP */
-nav {
-  background: var(--purple);
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--yellow);
-}
-
-/* HERO BANNER */
-.hero-banner {
-  width: 100%;
-  background: var(--cream);
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-.hero-banner img {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 10px;
-}
-
-/* QUICK LINKS */
-.quick-links {
-  padding: 40px 20px;
-}
-
-.card-grid {
-  max-width: 900px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.mini-card {
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--purple);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-  transition: 0.2s;
-}
-
-.mini-card h4 {
-  color: var(--red);
-  margin-bottom: 8px;
-}
-
-.mini-card:hover {
-  transform: translateY(-4px);
-}
-
-/* SUPPORT */
-
-.support {
-  background: white;
-  max-width: 900px;
-  margin: 20px auto 40px;
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
-
-.support h2 {
-  color: var(--red);
-  margin-bottom: 20px;
-}
-
-.support p {
-  margin-bottom: 18px;
-}
-
-.support-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 25px 0;
-}
-
-.support-links a {
-  display: inline-block;
-  background: var(--purple);
-  color: white;
-  text-decoration: none;
-  padding: 14px 24px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: .2s;
-}
-
-.support-links a:hover {
-  background: var(--red);
-}
-
-/* FOOTER */
-footer {
-  background: var(--purple);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* MOBILE NAV */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    right: -260px;
-    width: 260px;
-    height: 100%;
-    flex-direction: column;
-    background: var(--purple);
-    padding-top: 80px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-  }
-
-  nav a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  nav.active {
-    right: 0;
-  }
-}
-
-</style>
+<meta name="description" content="Love That Covers by Bradley Hobbs. A journey through love, healing, forgiveness, truth, and the restoring love of Jesus.">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header>
-  <div>
-    <h1>Love That Covers</h1>
-    <p>by Bradley Hobbs</p>
-  </div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="index.html">
+<span class="brand-title">Love That Covers</span>
+<span class="brand-author">Bradley Hobbs</span>
+</a>
+<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+<nav class="site-nav" id="siteNav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="forward.html">Forward</a>
+<a href="preface.html">Preface</a>
+<a href="stories.html">Stories</a>
+<a href="store.html">Store</a>
+<a href="about.html">About</a>
+<a href="resources.html">Resources</a>
+<a href="closing.html">Closing</a>
+<a href="prayer.html">Prayer</a>
+</nav>
+</div>
 </header>
 
-<nav id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="forward.html">Forward</a>
-  <a href="preface.html">Preface</a>
-  <a href="stories.html">Stories</a>
-  <a href="store.html">Store</a>
-  <a href="about.html">About</a>
-  <a href="resources.html">Resources</a> <!-- NEW -->
-  <a href="closing.html">Closing</a>
-  <a href="prayer.html">Prayer</a>
-</nav>
-
-<section class="hero-banner">
-  <img src="B301321B-BF15-4B34-BEE3-1EFD43D70DFA.png" alt="Love That Covers Banner">
+<main>
+<section class="hero">
+<img class="hero-image" src="B301321B-BF15-4B34-BEE3-1EFD43D70DFA.png" alt="Love That Covers book artwork">
+<div class="hero-content">
+<div class="container">
+<div class="hero-copy">
+<div class="eyebrow">A story of love, healing, and restoration</div>
+<h1>Love That Covers<span>Real stories. Honest wounds. The love of Jesus that restores.</span></h1>
+<p>Some wounds are carried quietly. Some stories take years to understand. Yet love can reach places pain could not, and grace can begin restoring what life has broken.</p>
+<div class="actions">
+<a class="button button-primary" href="stories.html">Read the Stories</a>
+<a class="button button-secondary" href="store.html">Get the Book</a>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<section class="quick-links">
-  <div class="card-grid">
-
-    <a href="forward.html" class="mini-card">
-      <h4>Forward</h4>
-      <p>Begin with the heart behind the story</p>
-    </a>
-
-    <a href="preface.html" class="mini-card">
-      <h4>Preface</h4>
-      <p>The invitation into the story</p>
-    </a>
-
-    <a href="stories.html" class="mini-card">
-      <h4>The Stories</h4>
-      <p>Follow the journey through five chapters</p>
-    </a>
-
-    <a href="store.html" class="mini-card">
-      <h4>Store</h4>
-      <p>Get your copy of Love That Covers</p>
-    </a>
-
-    <a href="closing.html" class="mini-card">
-      <h4>Closing Thoughts</h4>
-      <p>Reflect on love, healing, and legacy</p>
-    </a>
-
-    <a href="prayer.html" class="mini-card">
-      <h4>Prayer</h4>
-      <p>Commit your heart to a life of love</p>
-    </a>
-
-    <a href="about.html" class="mini-card">
-      <h4>About the Author</h4>
-      <p>Meet the heart behind the story</p>
-    </a>
-
-  </div>
+<section class="section">
+<div class="container intro">
+<div class="intro-card">
+<div class="eyebrow">The heart behind the book</div>
+<h2>Love does not ignore the wound. It covers it with grace.</h2>
+<p><strong>Love That Covers</strong> explores the places where hurt, disappointment, forgiveness, family, faith, and healing meet.</p>
+<p>This is not a story about pretending pain never happened. It is an invitation to discover what Jesus can do with the places we thought could never be restored.</p>
+</div>
+<div class="pullquote">“Healing does not erase the story. It changes what the story is able to produce.”</div>
+</div>
 </section>
 
-<section class="support">
-
-  <h2>Support My Writing</h2>
-
-  <p>
-    Every book, devotional, article, and study shared across these websites is freely available to read. Many hours of prayer, research, writing, editing, and website development go into creating and maintaining these resources.
-  </p>
-
-  <p>
-    Readers who have been encouraged, blessed, or helped through these writings and would like to support future projects may donate using the links below.
-  </p>
-
-  <div class="support-links">
-
-    <a
-      href="https://cash.app/$brad1gabe"
-      target="_blank"
-      rel="noopener noreferrer">
-      Cash App: $brad1gabe
-    </a>
-
-    <a
-      href="https://www.paypal.com/paypalme/brad1god"
-      target="_blank"
-      rel="noopener noreferrer">
-      PayPal: paypal.me/brad1god
-    </a>
-
-  </div>
-
-  <p>
-    Your support helps make future books, devotionals, studies, and ministry resources possible.
-  </p>
-
-  <p>
-    Suggestions for future topics and writing projects are always welcome. Thank you for visiting and being part of this journey.
-  </p>
-
+<section class="section section-soft">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow">Begin the journey</div>
+<h2>Walk through the story</h2>
+<p>Move at your own pace through the pages, reflections, prayers, and resources created around Love That Covers.</p>
+</div>
+<div class="grid">
+<a class="card" href="forward.html"><div class="card-number">Start here</div><h3>Forward</h3><p>Begin with the heart behind the story and the invitation to keep moving forward.</p></a>
+<a class="card" href="preface.html"><div class="card-number">Before the story</div><h3>Preface</h3><p>Step into the purpose behind the book and the message it carries.</p></a>
+<a class="card" href="stories.html"><div class="card-number">The journey</div><h3>The Stories</h3><p>Enter the five chapter journey through pain, faith, healing, and restoration.</p></a>
+<a class="card" href="prayer.html"><div class="card-number">Pause & pray</div><h3>Prayer</h3><p>Bring the places that still hurt before Jesus and make room for healing.</p></a>
+<a class="card" href="resources.html"><div class="card-number">Go deeper</div><h3>Resources</h3><p>Explore additional material designed to continue the conversation beyond the book.</p></a>
+<a class="card" href="closing.html"><div class="card-number">Keep walking</div><h3>Closing Thoughts</h3><p>Reflect on what love, healing, forgiveness, and legacy can become.</p></a>
+</div>
+</div>
 </section>
 
-<footer>
-  <p>© 2026 Bradley Hobbs | Love That Covers</p>
+<section class="section">
+<div class="container">
+<div class="cta">
+<div>
+<h2>Carry the message forward.</h2>
+<p>If this story speaks to you, share it with someone who needs a reminder that their pain does not have to have the final word.</p>
+</div>
+<div class="actions">
+<a class="button button-primary" href="store.html">Find the Book</a>
+<a class="button button-secondary" href="about.html">About Bradley</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div><h3>Love That Covers</h3><p>A journey through love, healing, truth, forgiveness, and the restoring love of Jesus.</p></div>
+<div><h3>Explore</h3><a href="stories.html">Stories</a><a href="resources.html">Resources</a><a href="prayer.html">Prayer</a></div>
+<div><h3>Connect</h3><a href="about.html">About the Author</a><a href="store.html">Get the Book</a><a href="closing.html">Closing Thoughts</a></div>
+</div>
+<div class="footer-bottom">© 2026 Bradley Hobbs | Love That Covers</div>
+</div>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("active");
+function toggleMenu(){
+const nav=document.getElementById('siteNav');
+const button=document.querySelector('.menu-toggle');
+const open=nav.classList.toggle('open');
+button.setAttribute('aria-expanded',open?'true':'false');
+button.setAttribute('aria-label',open?'Close navigation':'Open navigation');
 }
-</script>
 
+document.querySelectorAll('.site-nav a').forEach(link=>link.addEventListener('click',()=>{
+document.getElementById('siteNav').classList.remove('open');
+document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+document.querySelector('.menu-toggle').setAttribute('aria-label','Open navigation');
+}));
+</script>
 </body>
 </html>
