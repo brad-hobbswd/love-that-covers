@@ -3,276 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Stories | Love That Covers</title>
-
-<style>
-
-:root {
-  --cream: #f6e7c1;
-  --red: #e63946;
-  --purple: #5a3e6b;
-  --yellow: #f4c542;
-  --green: #6a994e;
-}
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
-body {
-  font-family: Georgia, serif;
-  background: var(--cream);
-  color: var(--purple);
-}
-
-/* HEADER */
-.site-header {
-  background: var(--red);
-  color: white;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* MENU ICON */
-.menu-toggle {
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-}
-
-/* NAV */
-.site-nav {
-  background: var(--purple);
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-}
-
-.site-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.site-nav a:hover {
-  color: var(--yellow);
-}
-
-/* DROPDOWN */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: var(--purple);
-  top: 100%;
-  left: 0;
-  min-width: 200px;
-  z-index: 1001;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 12px 15px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* CONTENT */
-.container {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-h2 {
-  text-align: center;
-  color: var(--red);
-  margin-bottom: 40px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-/* CARD */
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-.card h3 {
-  color: var(--red);
-  margin-bottom: 10px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: var(--green);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background: var(--purple);
-}
-
-/* FOOTER */
-footer {
-  background: var(--purple);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .site-nav {
-    position: fixed;
-    right: -260px;
-    top: 0;
-    height: 100%;
-    width: 260px;
-    flex-direction: column;
-    padding-top: 80px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-  }
-
-  .site-nav.active {
-    right: 0;
-  }
-
-  .site-nav a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  /* MOBILE DROPDOWN ALWAYS OPEN */
-  .dropdown-content {
-    display: block;
-    position: static;
-  }
-}
-
-</style>
+<meta name="description" content="Explore the five stories in Love That Covers by Bradley Hobbs.">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
 <header class="site-header">
-  <div>
-    <h1>Love That Covers</h1>
-    <p>by Bradley Hobbs</p>
-  </div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
-
-<nav class="site-nav" id="mobileNav">
-
-  <a href="index.html">Home</a>
-  <a href="forward.html">Forward</a>
-  <a href="preface.html">Preface</a>
-
-  <!-- DROPDOWN -->
-  <div class="dropdown">
-    <a href="stories.html">Stories ▾</a>
-    <div class="dropdown-content">
-      <a href="chapter1.html">Chapter One</a>
-      <a href="chapter2.html">Chapter Two</a>
-      <a href="chapter3.html">Chapter Three</a>
-      <a href="chapter4.html">Chapter Four</a>
-      <a href="chapter5.html">Chapter Five</a>
-    </div>
-  </div>
-
-  <a href="store.html">Store</a>
-  <a href="about.html">About</a>
-  <a href="resources.html">Resources</a>
-  <a href="closing.html">Closing</a>
-  <a href="prayer.html">Prayer</a>
-
+<div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-title">Love That Covers</span><span class="brand-author">Bradley Hobbs</span></a>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+<nav class="site-nav" id="siteNav" aria-label="Main navigation">
+<a href="index.html">Home</a><a href="forward.html">Forward</a><a href="preface.html">Preface</a><a href="stories.html" aria-current="page">Stories</a><a href="store.html">Store</a><a href="about.html">About</a><a href="resources.html">Resources</a><a href="closing.html">Closing</a><a href="prayer.html">Prayer</a>
 </nav>
-
-<div class="container">
-
-  <h2>The Stories</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Chapter One</h3>
-      <p>The Quilt</p>
-      <a href="chapter1.html" class="btn">Read</a>
-    </div>
-
-    <div class="card">
-      <h3>Chapter Two</h3>
-      <p>The Gift of Healing</p>
-      <a href="chapter2.html" class="btn">Read</a>
-    </div>
-
-    <div class="card">
-      <h3>Chapter Three</h3>
-      <p>The Thread of Love</p>
-      <a href="chapter3.html" class="btn">Read</a>
-    </div>
-
-    <div class="card">
-      <h3>Chapter Four</h3>
-      <p>Passing the Flame</p>
-      <a href="chapter4.html" class="btn">Read</a>
-    </div>
-
-    <div class="card">
-      <h3>Chapter Five</h3>
-      <p>The Legacy of Love</p>
-      <a href="chapter5.html" class="btn">Read</a>
-    </div>
-
-  </div>
-
 </div>
-
-<footer>
-  <p>© 2026 Bradley Hobbs</p>
-</footer>
-
+</header>
+<main>
+<section class="page-hero">
+<div class="container">
+<div class="eyebrow" style="color:#e6c981">The heart of the book</div>
+<h1>The Stories</h1>
+<p>Five stories. Five journeys. One thread of love that reaches across pain, healing, forgiveness, and legacy.</p>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-heading"><div class="eyebrow">Explore each chapter</div><h2>Follow the thread</h2><p>Each story carries a different expression of love and reminds us that what we receive can become what we pass on.</p></div>
+<div class="grid">
+<a class="card" href="chapter1.html"><div class="card-number">Chapter One</div><h3>The Quilt</h3><p>A story of love woven through the pieces of a life, reminding us that even what feels broken can become part of something beautiful.</p><span class="button button-outline">Read Chapter</span></a>
+<a class="card" href="chapter2.html"><div class="card-number">Chapter Two</div><h3>The Gift of Healing</h3><p>Discover how healing can begin when love makes room for grace, restoration, and the courage to face what hurts.</p><span class="button button-outline">Read Chapter</span></a>
+<a class="card" href="chapter3.html"><div class="card-number">Chapter Three</div><h3>The Thread of Love</h3><p>Follow the thread that connects one act of love to another and reveals how compassion can reach farther than we imagine.</p><span class="button button-outline">Read Chapter</span></a>
+<a class="card" href="chapter4.html"><div class="card-number">Chapter Four</div><h3>Passing the Flame</h3><p>Consider what happens when the love we have received becomes something we intentionally carry into another generation.</p><span class="button button-outline">Read Chapter</span></a>
+<a class="card" href="chapter5.html"><div class="card-number">Chapter Five</div><h3>The Legacy of Love</h3><p>Reflect on the legacy left behind when love becomes more than a feeling and becomes the way we live.</p><span class="button button-outline">Read Chapter</span></a>
+</div>
+<div class="chapter-nav"><a href="preface.html">← Preface</a><a href="closing.html">Closing →</a></div>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>Love That Covers</h3><p>A journey through love, healing, truth, forgiveness, and the restoring love of Jesus.</p></div><div><h3>Explore</h3><a href="stories.html">Stories</a><a href="resources.html">Resources</a><a href="prayer.html">Prayer</a></div><div><h3>Connect</h3><a href="about.html">About the Author</a><a href="store.html">Get the Book</a><a href="closing.html">Closing Thoughts</a></div></div><div class="footer-bottom">© 2026 Bradley Hobbs | Love That Covers</div></div></footer>
 <script>
-function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("active");
-}
+function toggleMenu(){const nav=document.getElementById('siteNav');const button=document.querySelector('.menu-toggle');const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open?'true':'false');button.setAttribute('aria-label',open?'Close navigation':'Open navigation');}
+document.querySelectorAll('.site-nav a').forEach(link=>link.addEventListener('click',()=>{document.getElementById('siteNav').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');document.querySelector('.menu-toggle').setAttribute('aria-label','Open navigation');}));
 </script>
-
 </body>
 </html>
