@@ -3,212 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Resources | Love That Covers</title>
-
-<style>
-
-/* SAME STYLES */
-:root {
-  --cream: #f6e7c1;
-  --red: #e63946;
-  --purple: #5a3e6b;
-  --yellow: #f4c542;
-  --blue: #4a90a4;
-  --green: #6a994e;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: Georgia, serif;
-  background: var(--cream);
-  color: var(--purple);
-  line-height: 1.8;
-}
-
-/* HEADER */
-header {
-  background: var(--red);
-  color: white;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-toggle { display: none; }
-
-/* NAV */
-nav {
-  background: var(--purple);
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover { color: var(--yellow); }
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 50px 20px 20px;
-}
-
-/* GRID */
-.card-grid {
-  max-width: 900px;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
-}
-
-/* CARD */
-.resource-card {
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-  transition: 0.2s;
-}
-
-.resource-card:hover {
-  transform: translateY(-4px);
-}
-
-.resource-card h3 {
-  color: var(--red);
-  margin-bottom: 10px;
-}
-
-/* 🔥 DIVIDERS */
-.section-divider {
-  grid-column: 1 / -1;
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 20px 0 5px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid var(--purple);
-}
-
-.section-sub {
-  grid-column: 1 / -1;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-/* FOOTER */
-footer {
-  background: var(--purple);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-</style>
+<meta name="description" content="Resources connected to Love That Covers, Bradley Hobbs, faith, writing, ministry, and creative work.">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<header>
-  <div>
-    <h1>Love That Covers</h1>
-    <p>by Bradley Hobbs</p>
-  </div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
-
-<nav id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="forward.html">Forward</a>
-  <a href="preface.html">Preface</a>
-  <a href="stories.html">Stories</a>
-  <a href="store.html">Store</a>
-  <a href="about.html">About</a>
-  <a href="resources.html">Resources</a>
-  <a href="closing.html">Closing</a>
-  <a href="prayer.html">Prayer</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-title">Love That Covers</span><span class="brand-author">Bradley Hobbs</span></a>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+<nav class="site-nav" id="siteNav" aria-label="Main navigation">
+<a href="index.html">Home</a><a href="forward.html">Forward</a><a href="preface.html">Preface</a><a href="stories.html">Stories</a><a href="store.html">Store</a><a href="about.html">About</a><a href="resources.html" aria-current="page">Resources</a><a href="closing.html">Closing</a><a href="prayer.html">Prayer</a>
 </nav>
-
-<section class="hero">
-  <h1>Resources</h1>
-  <p>Explore writing, design, and faith-centered connections.</p>
-</section>
-
-<section class="card-grid">
-
-  <!-- 🔥 MY WORK DIVIDER -->
-  <div class="section-divider">My Work</div>
-  <div class="section-sub">Books, writing, and web design created by me.</div>
-
-  <div class="resource-card">
-    <h3>Whispers in the Pew</h3>
-    <p>Devotionals centered on healing and truth.</p>
-    <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/">Visit →</a>
-  </div>
-
-  <div class="resource-card">
-    <h3>Love That Covers</h3>
-    <p>Healing and identity through Jesus.</p>
-    <a href="https://brad-hobbswd.github.io/love-that-covers/">Visit →</a>
-  </div>
-
-  <div class="resource-card">
-    <h3>LGBTQIA+ Edition</h3>
-    <p>Affirming identity and worth.</p>
-    <a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/">Visit →</a>
-  </div>
-
-  <div class="resource-card">
-    <h3>Jason's Memoir</h3>
-    <p>From overwhelm to awakening.</p>
-    <a href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/">Visit →</a>
-  </div>
-
-  <div class="resource-card">
-    <h3>About Me</h3>
-    <p>My story and journey.</p>
-    <a href="https://brad-hobbswd.github.io/about-me/">Visit →</a>
-  </div>
-
-  <div class="resource-card">
-    <h3>Web Design</h3>
-    <p>Creative work and development.</p>
-    <a href="https://brad-hobbswd.github.io/brad-hobbswd/">Visit →</a>
-  </div>
-
-  <div class="resource-card">
-    <h3>BAPBI</h3>
-    <p>Website and design built by me.</p>
-    <a href="https://www.bapbi.net">Visit →</a>
-  </div>
-
-  <!-- 🔥 MINISTRY DIVIDER -->
-  <div class="section-divider">Ministry & Personal</div>
-  <div class="section-sub">Places connected to my faith journey.</div>
-
-  <div class="resource-card">
-    <h3>Bethesda Tabernacle</h3>
-    <p>My place of worship. Not my design work.</p>
-    <a href="https://www.mercyforyou.org">Visit →</a>
-  </div>
-
-</section>
-
-<footer>
-  <p>© 2026 Bradley Hobbs | Love That Covers</p>
-</footer>
-
+</div>
+</header>
+<main>
+<section class="page-hero"><div class="container"><div class="eyebrow">Continue beyond the book</div><h1>Resources</h1><p>Explore writing, creative work, faith centered connections, and places to continue the journey.</p></div></section>
+<section class="section"><div class="container">
+<div class="section-heading"><div class="eyebrow">My work</div><h2>Books, writing, and creative work</h2><p>Explore projects created by Bradley Hobbs and connected to the themes of faith, identity, healing, and restoration.</p></div>
+<div class="grid">
+<a class="card" href="https://brad-hobbswd.github.io/whispers-in-the-pew/"><div class="card-number">Writing</div><h3>Whispers in the Pew</h3><p>Devotionals centered on healing and truth.</p><span class="card-link">Visit →</span></a>
+<a class="card" href="index.html"><div class="card-number">This book</div><h3>Love That Covers</h3><p>Healing, identity, forgiveness, and the love of Jesus.</p><span class="card-link">Explore →</span></a>
+<a class="card" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/"><div class="card-number">Companion work</div><h3>LGBTQIA+ Edition</h3><p>A companion work exploring identity, worth, and belonging.</p><span class="card-link">Visit →</span></a>
+<a class="card" href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/"><div class="card-number">Memoir</div><h3>Jason's Memoir</h3><p>A story of moving from overwhelm toward awakening.</p><span class="card-link">Visit →</span></a>
+<a class="card" href="https://brad-hobbswd.github.io/about-me/"><div class="card-number">Personal</div><h3>About Me</h3><p>Learn more about Bradley and his journey.</p><span class="card-link">Visit →</span></a>
+<a class="card" href="https://brad-hobbswd.github.io/brad-hobbswd/"><div class="card-number">Creative work</div><h3>Web Design</h3><p>Creative work, development, and digital projects.</p><span class="card-link">Visit →</span></a>
+</div>
+</div></section>
+<section class="section section-soft"><div class="container">
+<div class="section-heading"><div class="eyebrow">Ministry &amp; personal</div><h2>Places connected to the journey</h2><p>Faith and community connections that have shaped the larger story.</p></div>
+<div class="grid">
+<a class="card" href="https://www.bapbi.net"><div class="card-number">Ministry education</div><h3>BAPBI</h3><p>A ministry education and web project.</p><span class="card-link">Visit →</span></a>
+<a class="card" href="https://www.mercyforyou.org"><div class="card-number">Church</div><h3>Bethesda Tabernacle</h3><p>A place of worship connected to my faith journey.</p><span class="card-link">Visit →</span></a>
+</div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>Love That Covers</h3><p>A journey through love, healing, truth, forgiveness, and the restoring love of Jesus.</p></div><div><h3>Explore</h3><a href="stories.html">Stories</a><a href="resources.html">Resources</a><a href="prayer.html">Prayer</a></div><div><h3>Connect</h3><a href="about.html">About the Author</a><a href="store.html">Get the Book</a><a href="closing.html">Closing Thoughts</a></div></div><div class="footer-bottom">© 2026 Bradley Hobbs | Love That Covers</div></div></footer>
+<script>
+function toggleMenu(){const nav=document.getElementById('siteNav');const button=document.querySelector('.menu-toggle');const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open?'true':'false');button.setAttribute('aria-label',open?'Close navigation':'Open navigation');}
+document.querySelectorAll('.site-nav a').forEach(link=>link.addEventListener('click',()=>{document.getElementById('siteNav').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');}));
+</script>
 </body>
 </html>
