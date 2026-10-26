@@ -1,72 +1,47 @@
-<div align="center">
+# Love That Covers
+### By Bradley Hobbs
 
-Love That Covers
+**Love That Covers** explores healing, grace, forgiveness, redemption, restoration, and the transforming love of Jesus through stories and reflections. The project invites readers to bring pain and disappointment honestly before God while considering the hope and restoration found in Christ.
 
-By Bradley Hobbs
+## Read Online
 
-A story of healing, grace, restoration, and the love of Jesus.
+https://brad-hobbswd.github.io/love-that-covers/
 
-<br>
-<a href="https://brad-hobbswd.github.io/love-that-covers/">
-<img src="B301321B-BF15-4B34-BEE3-1EFD43D70DFA.png" alt="Love That Covers Banner" width="900">
-</a>
-<a href="https://brad-hobbswd.github.io/love-that-covers/">
-Visit the Website
-</a>
-</div>
+## Explore the Book
 
-⸻
+- [Forward](forward.html)
+- [Preface](preface.html)
+- [Stories](stories.html)
+- [Chapters One through Five](chapter1.html)
+- [Resources](resources.html)
+- [Prayer](prayer.html)
+- [About the Author](about.html)
+- [Closing Thoughts](closing.html)
+- [Store](store.html)
 
-About the Book
+## Website Features
 
-Love That Covers explores healing, grace, forgiveness, redemption, restoration, and the transforming love of Jesus through personal stories and reflections.
+- Online book reading experience
+- Story and chapter pages
+- Resources and prayer content
+- Responsive navigation
+- GitHub Pages hosting
 
-Readers are invited into a journey of faith, hope, compassion, healing, and spiritual growth while discovering the power of love that reaches beyond fear, shame, failure, and brokenness.
+## Technology
 
-⸻
+Built with HTML, CSS, and JavaScript.
 
-Explore the Book
+## Copyright and Permissions
 
-* Forward
-* Preface
-* The Stories
-* Closing Thoughts
-* Prayer
-* Resources
-* About the Author
+Copyright © 2026 Bradley Hobbs. All rights reserved.
 
-⸻
+The original manuscript, stories, chapter text, prayers, reflections, website copy, graphics, visual designs, and original source code are protected by the accompanying [LICENSE](LICENSE). No general permission is granted to copy, republish, distribute, modify, or commercially exploit these materials without prior written permission, except where applicable law permits otherwise. Third-party materials remain subject to their respective owners' terms.
 
-Support My Writing
+## Search Engine Files
 
-Every book, devotional, article, and study shared across these websites is freely available to read. Many hours of prayer, research, writing, editing, and website development go into creating and maintaining these resources.
+- [Sitemap](sitemap.xml)
+- [robots.txt](robots.txt)
 
-Readers who have been encouraged, blessed, or helped through these writings and would like to support future projects may donate using the options below.
+---
 
-Cash App
-
-$brad1gabe
-
-PayPal
-
-https://paypal.me/brad1god
-
-Your support helps make future books, devotionals, studies, and ministry resources possible.
-
-Suggestions for future topics and writing projects are always welcome.
-
-⸻
-
-Author
-
-Bradley Hobbs
-
-Author, devotional writer, and creator of faith-based resources focused on healing, hope, restoration, faith, and spiritual growth through Jesus.
-
-⸻
-
-<div align="center">
-
-© 2026 Bradley Hobbs. All rights reserved.
-
-</div>
+**Love does not ignore the wound. It covers it with grace.**
